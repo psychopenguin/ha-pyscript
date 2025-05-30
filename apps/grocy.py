@@ -72,7 +72,7 @@ def get_product_info(product_id):
     if picture_file:
         file_b64 = base64.b64encode(picture_file.encode()).decode()
         picture_url = f'{GROCY_API_BASE_URL}/files/productpictures/{file_b64}'
-        product_data['attributes']['picture'] = picture_url
+        product_data['attributes']['entity_picture'] = picture_url
 
     return product_data
 
